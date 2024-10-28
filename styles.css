@@ -1,0 +1,147 @@
+body {
+    background-color: #f8f9fa;
+    color: #343a40;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.5s, color 0.5s;
+}
+
+.navbar {
+    background: rgba(128, 128, 128, 0.8);
+}
+
+.navbar-brand, .nav-link {
+    color: #ffffff !important;
+    position: relative;
+    transition: color 0.3s;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 100%;
+    height: 2px;
+    background-color: #ffffff;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.nav-link:hover::after {
+    opacity: 1;
+    transform: scaleX(1);
+}
+
+.btn-primary {
+    background-color: #ff7f50; /* Warna oranye untuk tombol Learn More */
+    border-color: #ff7f50; /* Warna border */
+}
+
+.btn-primary:hover {
+    background-color: #ff6347; /* Warna oranye lebih gelap saat hover */
+    border-color: #ff6347; /* Warna border saat hover */
+}
+
+.btn-subscribe {
+    background: #ff7f50; /* Warna oranye untuk tombol Subscribe */
+    color: #ffffff; /* Warna teks putih */
+    border: none; /* Tanpa border */
+    transition: background 0.3s, transform 0.3s; /* Transisi halus */
+}
+
+.btn-subscribe:hover {
+    background: #ff6347; /* Warna oranye lebih gelap saat hover */
+    transform: scale(1.05); /* Efek zoom saat hover */
+}
+
+.content {
+    padding: 20px;
+}
+
+.footer {
+    padding: 20px;
+    background-color: #343a40;
+    color: #ffffff;
+    text-align: center;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.hero-section {
+    position: relative;
+    height: 400px;
+    color: wheat;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(211, 235, 255, 0.8), rgb(62, 58, 112)), url('https://wallpaperaccess.com/full/2461311.jpg') no-repeat center center/cover;
+}
+
+.hero-section .content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.section img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #343a40;
+    color: wheat;
+}
+
+.dark-mode .navbar {
+    background: rgba(100, 100, 100, 0.8); /* Warna abu-abu saat dark mode */
+}
+
+.dark-mode .footer {
+    background-color: #212529;
+}
+
+.dark-mode .btn-subscribe {
+    background: linear-gradient(45deg, #feb47b, #ff7e5f);
+}
+
+.navbar-brand {
+    font-family: 'Roboto', sans-serif; /* Menggunakan font Roboto */
+    font-size: 2rem; /* Ukuran font yang lebih besar */
+    font-weight: bold; /* Menjadikan font tebal */
+    letter-spacing: 1px; /* Menambahkan spasi antar huruf */
+    text-transform: uppercase; /* Mengubah teks menjadi huruf kapital */
+    transition: color 0.3s; /* Animasi transisi saat hover */
+}
+
+.navbar-brand:hover {
+    color: #007bff; /* Mengubah warna saat hover */
+}   
+
+/* Tambahan untuk transparansi navbar saat scroll */
+.navbar {
+    background: rgba(0, 123, 255, 0.8); /* Warna latar belakang dengan transparansi */
+    transition: background-color 0.5s; /* Transisi untuk perubahan warna */
+}
+
+.navbar.scrolled {
+    background: rgba(128, 128, 128, 1);
+}

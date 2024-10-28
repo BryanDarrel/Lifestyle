@@ -1,292 +1,122 @@
 <!DOCTYPE html>
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-  <title>
-   Lifestyle Vibes
-  </title>
-  <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <style>
-   body {
-            background-color: #f8f9fa;
-            color: #343a40;
-            font-family: Arial, sans-serif;
-            transition: background-color 0.5s;
-        }
-        .navbar {
-            background-color: #343a40;
-        }
-        .navbar-brand, .nav-link {
-            color: #ffffff !important;
-        }
-        .btn-subscribe {
-            background-color: #007bff;
-            color: #ffffff;
-        }
-        .content {
-            padding: 20px;
-        }
-        .content img {
-            max-width: 100%;
-            height: auto;
-        }
-        .footer {
-            padding: 20px;
-            background-color: #343a40;
-            color: #ffffff;
-            text-align: center;
-        }
-        .footer a {
-            color: #ffffff;
-            text-decoration: none;
-        }
-        .section {
-            padding: 40px 0;
-        }
-        .row {
-            display: flex;
-            align-items: center;
-            margin-bottom: 40px;
-        }
-        .row img {
-            margin-left: 20px;
-        }
-        .hero-section {
-            position: relative;
-            height: 400px;
-            color: #ffffff;
-            text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: url('https://placehold.co/1920x400') no-repeat center center/cover;
-        }
-        .hero-section .content {
-            position: relative;
-            z-index: 2;
-        }
-        .hero-section::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            z-index: 1;
-        }
-        .article-link {
-            position: relative;
-            display: block;
-            color: #ffffff;
-            text-decoration: none;
-        }
-        .article-link img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        .article-link .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        .article-link:hover .overlay {
-            opacity: 1;
-        }
-        .article-link .btn {
-            z-index: 2;
-        }
-  </style>
- </head>
- <body>
-  <nav class="navbar navbar-expand-lg fixed-top">
-   <div class="container-fluid">
-    <a class="navbar-brand" href="#">
-     Lifestyle Vibes
-    </a>
-    <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
-     <span class="navbar-toggler-icon">
-     </span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarNav">
-     <ul class="navbar-nav ms-auto">
-      <li class="nav-item">
-       <a class="nav-link" href="#home">
-        Home
-       </a>
-      </li>
-      <li class="nav-item">
-       <a class="nav-link" href="#about">
-        About
-       </a>
-      </li>
-      <li class="nav-item">
-       <a class="nav-link" href="#contact">
-        Contact
-       </a>
-      </li>
-      <li class="nav-item">
-       <a class="nav-link btn btn-subscribe" href="#subscribe">
-        Subscribe
-       </a>
-      </li>
-     </ul>
+<head>
+    <meta charset="utf-8"/>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <title>Lifestyle Vibes</title>
+    <link crossorigin="anonymous" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Lifestyle Vibes</a>
+            <button aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler" data-bs-target="#navbarNav" data-bs-toggle="collapse" type="button">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link btn btn-subscribe" href="#subscribe">Subscribe</a>
+                    </li>
+                </ul>
+                <button class="btn btn-outline-light ms-2" id="darkModeToggle">Toggle Dark Mode</button>
+            </div>
+        </div>
+    </nav>
+    <div class="hero-section" id="home">
+        <div class="content">
+            <h1>Welcome to Lifestyle Vibes</h1>
+            <p>Explore trends, wellness, and living your best life</p>
+            <a class="btn btn-primary" href="#about">Learn More</a>
+        </div>
     </div>
-   </div>
-  </nav>
-  <div class="hero-section">
-   <div class="content">
-    <h1>
-     Welcome to Lifestyle Vibes
-    </h1>
-    <p>
-     Explore trends, wellness, and living your best life
-    </p>
-    <a class="btn btn-primary" href="#home">
-     Explore Now
-    </a>
-   </div>
-  </div>
-  <div class="container content" id="home" style="padding-top: 80px;">
-   <div class="carousel slide" data-bs-ride="carousel" id="carouselExampleIndicators">
-    <div class="carousel-indicators">
-     <button aria-current="true" aria-label="Slide 1" class="active" data-bs-slide-to="0" data-bs-target="#carouselExampleIndicators" type="button">
-     </button>
+    <div class="container content section" id="about" style="padding-top: 80px;">
+        <h2>About Us</h2>
+        <img src="poto1.jpg" alt="">
+        <p>
+            We are a passionate team dedicated to sharing the art of living well. Our journey began with a simple belief that life is meant to be lived to the fullest, embracing every opportunity to learn, grow, and explore. At Lifestyle Vibes, we aim to inspire our readers to cultivate a balanced and fulfilling life through thoughtfully curated content, covering everything from health and wellness tips to the latest fashion trends. Join us as we explore new destinations, dive into mindful living practices, and share stories that elevate everyday experiences.
+        </p>
+        <p>
+            Our mission extends beyond just providing information; we strive to foster a community where like-minded individuals can come together, exchange ideas, and find motivation to pursue their passions. We believe that a vibrant life is shaped by the experiences we embrace, the people we meet, and the dreams we chase. Here, you'll find articles that resonate with your lifestyle, motivate you to try new things, and encourage you to live authentically. Let’s journey together towards a life filled with inspiration, creativity, and a touch of adventure.
+        </p>
     </div>
-    <div class="carousel-inner">
-     <div class="carousel-item active">
-      <img alt="Lifestyle image 1" class="d-block w-100" height="300" src="https://storage.googleapis.com/a1aa/image/uLhBf6SBvDT3AyaXIPDfJ3SeNYOVOrhKBOYUaVUbrYqzZbVnA.jpg" width="1920"/>
-      <div class="carousel-caption d-none d-md-block">
-       <h5>
-        HOME
-       </h5>
-       <p>
-        Experience a curated blend of everyday inspiration, from the latest trends in fashion, wellness, and home decor to travel tips and culinary delights. Our lifestyle website is your go-to source for elevating your daily life with a touch of style and sophistication. Discover the art of living well through expert insights, thoughtful recommendations, and engaging stories that help you cultivate a life full of vibrance, creativity, and balance. Whether you're seeking beauty advice, mindfulness practices, or ways to add a little luxury to your routines, we bring you all the vibes to live your best life
-       </p>
-      </div>
-     </div>
+
+    <section id="contact" class="container mt-5" style="padding-top: 80px;">
+        <div class="sticky-container p-4 border rounded shadow-sm" style="position: sticky; top: 80px;">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <p class="text-center mb-4">Got any questions or suggestions? Feel free to contact us!</p>
+            
+            <div class="row">
+                <!-- Left Column: Contact Form -->
+                <div class="col-md-6">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" class="form-control" id="name" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Email address</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea class="form-control" id="message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+                <!-- Right Column: Additional Information -->
+                <div class="col-md-6">
+                    <img src="poto2.jpg" alt="" class="img-fluid mb-4">
+                    <p>
+                        We would love to hear from you! Whether you have a question, feedback, or a collaboration proposal, feel free to reach out to us. Your thoughts and suggestions are highly valued, as they help us continue improving and bringing content that matters to you. You can contact us through our social media channels or by sending us an email at support@lifestylevibes.com. We aim to respond to all inquiries promptly and look forward to connecting with you.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="container content section" id="subscribe">
+        <div class="card bg-light text-dark">
+            <div class="card-body">
+                <h3 class="card-title">Join Our Community</h3>
+                <p class="card-text">Subscribe for the latest lifestyle updates</p>
+                <form class="row g-3">
+                    <div class="col-md-6">
+                        <input class="form-control" placeholder="First Name" type="text"/>
+                    </div>
+                    <div class="col-md-6">
+                        <input class="form-control" placeholder="Email" type="email"/>
+                    </div>
+                    <div class="col-12">
+                        <button class="btn btn-subscribe" type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-    <button class="carousel-control-prev" data-bs-slide="prev" data-bs-target="#carouselExampleIndicators" type="button">
-     <span aria-hidden="true" class="carousel-control-prev-icon">
-     </span>
-     <span class="visually-hidden">
-      Previous
-     </span>
-    </button>
-    <button class="carousel-control-next" data-bs-slide="next" data-bs-target="#carouselExampleIndicators" type="button">
-     <span aria-hidden="true" class="carousel-control-next-icon">
-     </span>
-     <span class="visually-hidden">
-      Next
-     </span>
-    </button>
-   </div>
-   <h1>
-    Welcome to the Lifestyle Hub
-   </h1>
-   <p>
-    Explore trends, wellness, and living your best life
-   </p>
-   <p>
-    Lifestyle is all about finding balance, embracing health, and living in the moment. Whether you're into fitness, mindfulness, or just looking to elevate your daily routine, you've come to the right place.
-   </p>
-   <img alt="Top view of a workspace with a laptop, notebook, and a plate with cookies" height="400" src="https://storage.googleapis.com/a1aa/image/RfU8xvpYifqMtEWZvb4FlGao1Tlb876mPfUEcHhzd0dxZbVnA.jpg" width="800"/>
-   <p>
-    <small>
-     Photo from Unsplash
-    </small>
-   </p>
-   <div class="row">
-    <div class="col-md-6">
-     <h2>
-      Latest in Wellness
-     </h2>
-     <p>
-      Discover the latest trends in wellness, from meditation techniques to fitness tips that keep you grounded and healthy.
-     </p>
-     <a class="article-link" href="https://theconversation.com/id/topics/lifestyle-1886">
-      <img alt="Wellness article image" height="300" src="https://storage.googleapis.com/a1aa/image/DCeTEKNek5hdeI3ZuZf8AZrXSKmrB9360oh6CUcGqvdB02qOB.jpg" width="400"/>
-      <div class="overlay">
-       <button class="btn btn-primary">
-        Read More
-       </button>
-      </div>
-     </a>
-    </div>
-    <div class="col-md-6">
-     <h2>
-      Explore Fashion &amp; Trends
-     </h2>
-     <p>
-      Stay ahead in fashion with insights into what's trending, sustainable fashion tips, and more.
-     </p>
-     <a class="article-link" href="https://www.theguardian.com/us/lifeandstyle">
-      <img alt="Fashion article image" height="300" src="https://storage.googleapis.com/a1aa/image/iN1pKUAOwvpuH5KetDHGGKOOSkd7i7wIXdhpf5R3jfF4ZbVnA.jpg" width="400"/>
-      <div class="overlay">
-       <button class="btn btn-primary">
-        Read More
-       </button>
-      </div>
-     </a>
-    </div>
-   </div>
-  </div>
-  <div class="container section" id="about">
-   <h2>
-    About Us
-   </h2>
-   <img alt="Team working together" class="img-fluid" height="400" src="https://storage.googleapis.com/a1aa/image/yYwEiXgrd25wEN18rjn56REyzAITSG5fXELMkuxAXGod2W1JA.jpg" width="800"/>
-   <p>
-    Welcome to our corner of the internet, where everyday life meets extraordinary style. We’re a passionate team of creators, trendsetters, and life enthusiasts dedicated to sharing the art of living well. Our mission is to inspire and empower you to elevate every aspect of your life, from the little joys to the big moments. Here, you'll find a curated mix of lifestyle content that embraces the beauty of simplicity, the thrill of adventure, and the pursuit of well-being. Join us on this journey as we celebrate the good life—crafted with intention, style, and a whole lot of heart.
-   </p>
-  </div>
-  <div class="container section" id="contact">
-   <h2>
-    Contact
-   </h2>
-   <img alt="Contact us image" class="img-fluid" height="400" src="https://storage.googleapis.com/a1aa/image/H9kcnBWrH545LdtxgLtfI8TAt7d0b1un3zL5GlxAOj2estqTA.jpg" width="800"/>
-   <p>
-    Get in touch with us for any inquiries, feedback, or collaborations.
-   </p>
-  </div>
-  <div class="container section" id="subscribe">
-   <div class="card bg-light text-dark">
-    <div class="card-body">
-     <h3 class="card-title">
-      Join Our Community
-     </h3>
-     <p class="card-text">
-      Subscribe for the latest lifestyle updates
-     </p>
-     <form class="row g-3">
-      <div class="col-md-6">
-       <input class="form-control" placeholder="First Name" type="text"/>
-      </div>
-      <div class="col-md-6">
-       <input class="form-control" placeholder="Email" type="email"/>
-      </div>
-      <div class="col-12">
-       <button class="btn btn-subscribe" type="submit">
-        Subscribe
-       </button>
-      </div>
-     </form>
-    </div>
-   </div>
-  </div>
-  </div>
     <div class="footer">
         <p><a href="#">Privacy Policy</a> • <a href="#">Terms & Conditions</a></p>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qJm4L4UsZHaXS1ntP3SnD9vJXgLK8cD1U/djiy1cGFqVnE82K7QgHcRn7lMNH3hG" crossorigin="anonymous"></script>
+    <script>
+        // Toggle Dark Mode
+        document.getElementById('darkModeToggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+        });
+    </script>
+</body>
+</html>
